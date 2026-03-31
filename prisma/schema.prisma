@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") 
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String  @unique
+  name     String
+  account  String?   @unique
+  password String
+  role     String   @default("USER") // 可設定為 ADMIN 以供後台管理使用
+}
+
+model CarbonRecord {
+  id             Int      @id @default(autoincrement())
+  employeeName   String
+  department     String
+  commuteMethod  String   // 汽車、機車、大眾運輸等
+  distanceKm     Float
+  attendanceDays Int
+  totalEmission  Float    // 計算後的總碳排量 (kgCO2e)
+  createdAt      DateTime @default(now())
+}
