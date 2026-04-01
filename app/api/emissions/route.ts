@@ -5,10 +5,12 @@ const prisma = new PrismaClient();
 
 // 簡單排放係數定義 (單位: kgCO2e/km)
 const EMISSION_FACTORS: Record<string, number> = {
-  "汽車": 0.173,
-  "機車": 0.046,
+  "汽車": 0.115,
+  "機車": 0.0951,
   "捷運": 0.033,
-  "公車": 0.080,
+  "公車": 0.053,
+  "台鐵": 0.053,
+  "高鐵": 0.033,
   "步行/自行車": 0,
 };
 
