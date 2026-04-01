@@ -58,6 +58,8 @@ export default function InputPage() {
               <option value="公車">🚌 公車</option>
               <option value="步行">🚶 步行</option>
               <option value="腳踏車">🚲 腳踏車</option>
+              <option value="台鐵">🚂 台鐵</option>
+              <option value="高鐵">🚅 高鐵</option>
             </select>
           </div>
 
