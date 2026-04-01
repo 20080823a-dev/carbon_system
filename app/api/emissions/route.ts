@@ -45,3 +45,17 @@ export async function GET() {
   });
   return NextResponse.json(records);
 }
+export async function DELETE(req: Request) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+    if (!id) return NextResponse.json({ error: "缺少 ID" }, { status: 400 });
+
+    await prisma.carbonRecord.delete({
+      where: { id: Number(id) }
+    });
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json({ error: "刪除失敗" }, { status: 500 });
+  }
+}
