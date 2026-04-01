@@ -20,7 +20,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-emerald-50 via-white to-blue-50">
         <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 p-10 max-w-md w-full text-center transform transition-all hover:scale-[1.01]">
           <div className="mb-6"><span className="text-6xl drop-shadow-sm">🔐</span></div>
-          <h1 className="text-3xl font-extrabold text-gray-800 mb-3 tracking-tight">企業碳排管理</h1>
+          <h1 className="text-3xl font-extrabold text-gray-800 mb-3 tracking-tight">交通碳排管理</h1>
           <p className="text-gray-500 mb-8 text-sm font-medium">請先登入或註冊以存取系統完整功能</p>
           
           <div className="flex flex-col gap-4">
